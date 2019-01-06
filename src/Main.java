@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,26 +7,29 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Integer losowa = 0;
-        int howManyLoops = 0;
-        ArrayList<Integer> array = new ArrayList<>();
-        Random generator = new Random();
-        Scanner io = new Scanner(System.in); // obiekt do odczytu danych z klawiatury
-        howManyLoops = io.nextInt(); //pobranie danych z klawiatury
+        List<String> companies = new ArrayList();
+        companies.add("DELL");
+        companies.add("APPLE");
+        companies.add("SAMSUNG");
+        companies.add("SONY");
+        companies.add("ALCATEL");
 
-        for (int i = 0; i < howManyLoops; i++){
+        String temp = "";
 
-            losowa = generator.nextInt(100);
-            array.add(losowa);
-            System.out.println(losowa);
+        for (int i = 0; i < companies.size(); i++){
+
+
+            temp += companies.get(i) + ", ";
 
         }
 
-        System.out.println( "Wydruk z listy: ");
+        System.out.println(temp);
+
+/*        System.out.println( "Wydruk z listy: ");
         for (Integer liczba: array) {
 
             System.out.println(liczba);
-        }
+        }*/
 
 
     }
